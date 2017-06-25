@@ -18,8 +18,8 @@
           <p class="namepr">Q<span class="log">Fix</span></p>      
         </div>
         <li class="log_in"><a class="text_a" id="" href="#modal">Войти</a></li>
-        <li class="signup"><a class="text_a" href="">Регистрация</a></li> 
-        <li class="search_p"><a class="text_a" href="#search_sto">Поиск</a></li>              
+        <li class="signup"><a class="text_a" href="#register">Регистрация</a></li> 
+        <li class="search_p"><a class="text_a" href="#search_sto">Поиск</a></li>  
     </nav> 
     <header class="hdr1"> 
       <div class="slidershow-container">			
@@ -267,19 +267,30 @@
                 <input class="inputmodal" type="password" name="textfield" placeholder="Пароль">            
             </div>
             <a class="reload_pass" href="">Восстановить пароль</a> 
-        </div>
-                  
+        </div>       
       <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
       <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
     </div>
+    <?-- Модальное окно входа-?>
     <script>
     var options = {...};
     $('[data-remodal-id=modal]').remodal(options);
     </script>
+    <?-- Модальное окно регистрации-?>
+    <script>
+    var options = {...};
+    $('[data-remodal-id=register]').remodal(options);
+    </script>
+      <div class="remodal" data-remodal-id="register">
+      <button data-remodal-action="close" class="remodal-close"></button>          
+      <button data-remodal-action="cancel" class="remodal-regauto">Регистрация автосервиса</button>
+      <button data-remodal-action="confirm" class="remodal-reguser">Регистрация пользователя</button>
+    </div>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
-    </script>            
+    </script> 
+    <?-- Плавный переход по id-?>           
     <script type="text/javascript" >а
- $(document).ready(function() {
+        $(document).ready(function() {
  
 $('a[href^="#"]').click(function(){
         var el = $(this).attr('href');
@@ -289,6 +300,6 @@ $('a[href^="#"]').click(function(){
 });
     
 });
-</script>
+    </script>
   </body>
 </html>
